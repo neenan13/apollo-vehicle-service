@@ -33,7 +33,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 # CRUD
 # -------------------------------
 
-@app.get("/vehicle", response_model=list[VehicleSchema])
+@app.get("/vehicle", response_model=list[VehicleResponse])
 def list_vehicles(db: Session = Depends(get_db)):
 
     """Return all vehicles."""
